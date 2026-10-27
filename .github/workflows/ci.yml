@@ -1,0 +1,33 @@
+
+name: QA Engineering Lab - CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  testes-e-build:
+    name: Testes automatizados e build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar o codigo do repositorio
+        uses: actions/checkout@v7
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Executar testes automatizados
+        run: npm run test:run
+
+      - name: Validar build
+        run: npm run build

@@ -1,0 +1,937 @@
+/* Estrutura principal */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+main {
+  min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 8%;
+  border-bottom: 1px solid #263447;
+}
+
+header h2 {
+  font-size: 20px;
+  color: #25cdb5;
+}
+
+/* Navegação */
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: #f3f6fc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #25cdb5;
+}
+
+/* Apresentação */
+#inicio {
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 12%;
+}
+
+#inicio h1 {
+  font-size: clamp(36px, 5vw, 64px);
+  margin: 15px 0;
+}
+
+#inicio h2 {
+  color: #25cdb5;
+  font-size: 28px;
+}
+
+#inicio p {
+  max-width: 600px;
+  color: #aebed0;
+  line-height: 1.8;
+}
+
+/* Botão do laboratório */
+#inicio a {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 15px 28px;
+  background: #25cdb5;
+  color: #101827;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+#inicio a:hover {
+  transform: translateY(-4px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  #inicio {
+    padding: 60px 8%;
+  }
+}
+
+/* Laboratório de QA */
+
+.laboratorio {
+  padding: 90px 12%;
+  border-top: 1px solid #263447;
+}
+
+.laboratorio-subtitulo {
+  color: #25cdb5;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.laboratorio h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  margin: 15px 0;
+}
+
+.laboratorio>p {
+  max-width: 650px;
+  color: #aebed0;
+  line-height: 1.7;
+}
+
+.laboratorio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.projeto-card {
+  padding: 32px;
+  background: #19263a;
+  border: 1px solid #263447;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.projeto-card:hover {
+  border-color: #25cdb5;
+  transform: translateY(-5px);
+}
+
+.projeto-card h3 {
+  margin-top: 0;
+  color: #f3f6fc;
+}
+
+.projeto-card p {
+  color: #aebed0;
+  line-height: 1.6;
+}
+
+.projeto-card span {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 13px;
+  color: #25cdb5;
+}
+
+@media (max-width: 768px) {
+  .laboratorio {
+    padding: 60px 8%;
+  }
+
+  .laboratorio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Links internos do laboratório */
+
+.projeto-card a,
+.laboratorio a {
+  color: #25cdb5;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.projeto-card a:hover,
+.laboratorio a:hover {
+  color: #67f5df;
+  text-decoration: underline;
+}
+
+/* Laboratório de Cadastro de Veículos */
+
+.cadastro-veiculo {
+  margin-top: 40px;
+  padding: 32px;
+  background: #19263a;
+  border: 1px solid #263447;
+  border-radius: 12px;
+}
+
+.cadastro-veiculo h2 {
+  color: #25cdb5;
+  font-size: 24px;
+}
+
+.cadastro-veiculo form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.cadastro-veiculo form div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cadastro-veiculo label {
+  font-weight: 600;
+}
+
+.cadastro-veiculo input {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #34445b;
+  background: #101827;
+  color: #f3f6fc;
+  font-size: 16px;
+}
+
+.cadastro-veiculo input:focus {
+  outline: 2px solid #25cdb5;
+}
+
+.cadastro-veiculo button {
+  padding: 15px;
+  background: #25cdb5;
+  color: #101827;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cadastro-veiculo button:hover {
+  background: #67f5df;
+}
+
+/* Dashboard de qualidade */
+
+.relatorio-qa {
+  margin-top: 48px;
+  padding: 32px;
+  background: #19263a;
+  border: 1px solid #263447;
+  border-radius: 12px;
+}
+
+.relatorio-qa h2 {
+  font-size: 28px;
+  color: #f3f6fc;
+}
+
+.relatorio-qa>p {
+  color: #aebed0;
+}
+
+.relatorio-metricas {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.metrica-card {
+  padding: 24px;
+  background: #101827;
+  border: 1px solid #34445b;
+  border-radius: 10px;
+}
+
+.metrica-card h3 {
+  font-size: 36px;
+  color: #25cdb5;
+  margin: 0;
+}
+
+.metrica-card p {
+  color: #aebed0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 1100px) {
+  .relatorio-metricas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .relatorio-qa {
+    padding: 20px;
+  }
+
+  .relatorio-metricas {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tabela de resultados QA */
+
+.relatorio-qa>h3 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #f3f6fc;
+}
+
+.tabela-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tabela-resultados {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 650px;
+}
+
+.tabela-resultados th,
+.tabela-resultados td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #34445b;
+}
+
+.tabela-resultados th {
+  color: #25cdb5;
+  font-size: 14px;
+}
+
+.tabela-resultados td {
+  color: #dce6f2;
+  font-size: 14px;
+}
+
+.tabela-resultados tbody tr:hover {
+  background: #263447;
+}
+
+/* Filtro por requisito */
+
+.filtro-qa {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  margin-bottom: 25px;
+}
+
+.filtro-qa label {
+  color: #aebed0;
+  font-weight: 600;
+}
+
+.filtro-qa select {
+  padding: 12px;
+  background: #101827;
+  color: #f3f6fc;
+  border: 1px solid #34445b;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.filtro-qa select:focus {
+  outline: 2px solid #25cdb5;
+}
+
+/* Explorador de Casos de Teste */
+
+.explorador-casos {
+  margin-top: 48px;
+  padding: 32px;
+  background: #19263a;
+  border: 1px solid #263447;
+  border-radius: 12px;
+}
+
+.explorador-casos h2 {
+  color: #f3f6fc;
+  font-size: 28px;
+}
+
+.explorador-casos>p {
+  color: #aebed0;
+}
+
+.lista-casos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+  align-items: start;
+}
+
+.caso-card {
+  padding: 24px;
+  background: #101827;
+  border: 1px solid #34445b;
+  border-radius: 10px;
+}
+
+.caso-card h3 {
+  color: #f3f6fc;
+}
+
+.caso-card p {
+  color: #aebed0;
+  line-height: 1.6;
+}
+
+.caso-card span {
+  color: #25cdb5;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .explorador-casos {
+    padding: 20px;
+  }
+
+  .lista-casos {
+    grid-template-columns: 1fr;
+  }
+}
+
+.botao-detalhes {
+  margin-top: 16px;
+  padding: 11px 18px;
+  border: 1px solid #25cdb5;
+  border-radius: 8px;
+  background: transparent;
+  color: #25cdb5;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.botao-detalhes:hover {
+  background: #25cdb5;
+  color: #101827;
+}
+
+.botao-detalhes:focus-visible {
+  outline: 2px solid #67f5df;
+  outline-offset: 3px;
+}
+
+.detalhes-caso {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #34445b;
+}
+
+.detalhes-caso p {
+  color: #aebed0;
+  line-height: 1.6;
+}
+
+/* Gestão de Defeitos */
+
+.gestao-defeitos {
+  margin-top: 48px;
+  padding: 32px;
+  background: #19263a;
+  border: 1px solid #263447;
+  border-radius: 12px;
+}
+
+.gestao-defeitos h2 {
+  color: #f3f6fc;
+  font-size: 28px;
+}
+
+.gestao-defeitos>p {
+  color: #aebed0;
+  line-height: 1.6;
+}
+
+.lista-defeitos {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.defeito-card {
+  padding: 24px;
+  border-radius: 10px;
+  background: #101827;
+  border: 1px solid #34445b;
+}
+
+.defeito-card span {
+  color: #25cdb5;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.defeito-card h3 {
+  color: #f3f6fc;
+  margin-top: 16px;
+}
+
+.defeito-card p {
+  color: #aebed0;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .gestao-defeitos {
+    padding: 20px;
+  }
+
+  .lista-defeitos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Detalhes da investigação */
+
+.detalhes-defeito {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #34445b;
+}
+
+.detalhes-defeito h4 {
+  margin: 22px 0 8px;
+  color: #25cdb5;
+}
+
+.detalhes-defeito p {
+  color: #aebed0;
+  line-height: 1.7;
+}
+
+/* Comparação das evidências */
+
+.evidencias-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.evidencias-grid figure {
+  margin: 0;
+  min-width: 0;
+}
+
+.evidencias-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #34445b;
+  border-radius: 8px;
+}
+
+.evidencias-grid figcaption {
+  margin-top: 10px;
+  color: #aebed0;
+  font-size: 13px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .evidencias-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.passos-caso {
+  margin-top: 20px;
+}
+
+.passos-caso h4 {
+  color: #25cdb5;
+  margin-bottom: 12px;
+}
+
+.passos-caso ol {
+  padding-left: 24px;
+  color: #aebed0;
+  line-height: 1.8;
+}
+
+.passos-caso li {
+  padding-left: 6px;
+  margin-bottom: 6px;
+}
+
+/* Busca e ordenação do Explorador */
+
+.controles-explorador {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.campo-busca,
+.campo-ordenacao {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.campo-busca label,
+.campo-ordenacao label {
+  color: #aebed0;
+  font-size: 14px;
+}
+
+.campo-busca input,
+.campo-ordenacao select {
+  width: 100%;
+  padding: 12px;
+  color: #f3f6fc;
+  background: #101827;
+  border: 1px solid #34445b;
+  border-radius: 8px;
+}
+
+.contador-casos {
+  margin-top: 18px;
+  color: #25cdb5;
+  font-size: 14px;
+}
+
+.mensagem-sem-resultados {
+  color: #aebed0;
+  padding: 20px 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .controles-explorador {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* Histórico de Execuções QA */
+
+.historico-execucoes h2 {
+  font-size: 28px;
+  color: #f3f6fc;
+}
+
+.historico-execucoes {
+  margin-top: 32px;
+  padding: 32px;
+  background: #19263a;
+  border: 1px solid #34445b;
+  border-radius: 12px;
+}
+
+.lista-execucoes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+  align-items: start;
+}
+
+.execucao-card {
+  padding: 24px;
+  background: #101827;
+  border: 1px solid #34445b;
+  border-radius: 10px;
+  min-width: 0;
+}
+
+.execucao-id {
+  color: #25cdb5;
+  font-weight: 600;
+}
+
+.execucao-card h3 {
+  margin: 12px 0 20px;
+  color: #f3f6fc;
+}
+
+.execucao-card p {
+  color: #aebed0;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .lista-execucoes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .historico-execucoes {
+    padding: 20px;
+  }
+
+  .lista-execucoes {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Detalhes do Histórico de Execuções */
+
+.detalhes-execucao {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #34445b;
+}
+
+.detalhes-execucao h4 {
+  color: #25cdb5;
+  margin-bottom: 16px;
+}
+
+.detalhes-execucao ol {
+  padding-left: 22px;
+}
+
+.detalhes-execucao li {
+  margin-bottom: 14px;
+  color: #aebed0;
+  line-height: 1.6;
+}
+
+.detalhes-execucao li strong {
+  display: block;
+  margin-top: 4px;
+  color: #25cdb5;
+}
+
+/* Indicadores do Histórico de Execuções */
+
+.metricas-historico {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.metrica-historico {
+  padding: 22px;
+  background: #101827;
+  border: 1px solid #34445b;
+  border-radius: 10px;
+  min-width: 0;
+}
+
+.metrica-historico h3 {
+  margin: 0 0 10px;
+  color: #25cdb5;
+  font-size: 30px;
+}
+
+.metrica-historico p {
+  margin: 0;
+  color: #aebed0;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .metricas-historico {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .metricas-historico {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Filtros do Histórico QA */
+
+.filtros-historico {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.filtros-historico > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filtros-historico label {
+  color: #aebed0;
+  font-size: 14px;
+}
+
+.filtros-historico select {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #34445b;
+  border-radius: 8px;
+  background: #101827;
+  color: #f3f6fc;
+}
+
+.resumo-filtros-historico {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.resumo-filtros-historico p {
+  color: #25cdb5;
+  margin: 0;
+}
+
+.resumo-filtros-historico button {
+  padding: 10px 14px;
+  border: 1px solid #25cdb5;
+  border-radius: 8px;
+  color: #25cdb5;
+  background: transparent;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .filtros-historico {
+    grid-template-columns: 1fr;
+  }
+
+  .resumo-filtros-historico {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+/* Painel de Automação */
+
+.automacao-testes {
+  margin-top: 48px;
+  padding: 32px;
+  background: #19263a;
+  border: 1px solid #34445b;
+  border-radius: 12px;
+}
+
+.automacao-testes h2 {
+  font-size: 28px;
+  color: #f3f6fc;
+}
+
+.automacao-testes > p {
+  color: #aebed0;
+  line-height: 1.6;
+}
+
+.automacao-testes > .laboratorio-subtitulo {
+  color: #25cdb5;
+}
+
+.automacao-aviso {
+  font-size: 13px;
+}
+
+.automacao-metricas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.automacao-metricas > div,
+.automacao-card {
+  padding: 24px;
+  background: #101827;
+  border: 1px solid #34445b;
+  border-radius: 10px;
+  min-width: 0;
+}
+
+.automacao-metricas h3 {
+  margin: 0;
+  font-size: 32px;
+  color: #25cdb5;
+}
+
+.automacao-metricas p,
+.automacao-card p {
+  color: #aebed0;
+  overflow-wrap: anywhere;
+}
+
+.automacao-lista {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+  align-items: start;
+}
+
+.automacao-card span {
+  font-size: 13px;
+  color: #25cdb5;
+  font-weight: 600;
+}
+
+.automacao-card h3 {
+  color: #f3f6fc;
+}
+
+@media (max-width: 768px) {
+  .automacao-testes {
+    padding: 20px;
+  }
+
+  .automacao-lista {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .automacao-metricas {
+    grid-template-columns: 1fr;
+  }
+}
