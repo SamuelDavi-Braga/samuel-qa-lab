@@ -1,75 +1,103 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# QA Engineering Lab
 
-Currently, two official plugins are available:
+Portfólio interativo de Quality Assurance desenvolvido
+com React, TypeScript e Vite.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+O projeto demonstra práticas de testes funcionais,
+automação, documentação de casos de teste, gestão
+de defeitos e integração contínua.
 
-## React Compiler
+## Tecnologias utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- TypeScript
+- Vite
+- Vitest
+- React Testing Library
+- Git e GitHub
+- GitHub Actions
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Cadastro de Veículos
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Ambiente de testes para validação de formulários.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Requisitos implementados:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- RF-002 — Campos obrigatórios
+- RF-003 — Validação de placas
+- RF-004 — Validação do ano de fabricação
 
+### Explorador de Casos
+
+Biblioteca com 20 casos de teste documentados,
+incluindo filtros, busca, ordenação e passos de execução.
+
+### Gestão de Defeitos
+
+Documentação de defeitos identificados durante
+o desenvolvimento, incluindo investigação,
+correção, evidências e retestes.
+
+### Histórico de Execuções
+
+Registro das validações manuais realizadas
+nas funcionalidades do próprio portfólio.
+
+### Automação de Testes
+
+Suítes automatizadas de regras de negócio e
+testes de interface React.
+
+## Resultados dos testes
+
+| Categoria | Testes aprovados |
+|---|---:|
+| RF-002 — Campos obrigatórios | 4 |
+| RF-003 — Validação de placas | 7 |
+| RF-004 — Ano de fabricação | 9 |
+| Interface React | 9 |
+| **Total** | **29** |
+
+Resultados referentes à execução automatizada
+validada durante o desenvolvimento.
+
+## Como executar o projeto
+
+Instale as dependências:
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Inicie o servidor de desenvolvimento:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm run dev
 ```
+
+Execute os testes automatizados:
+
+```bash
+npm run test:run
+```
+
+Execute o build:
+
+```bash
+npm run build
+```
+
+## Integração contínua
+
+O projeto utiliza GitHub Actions para executar
+automaticamente os testes e o build a cada
+push ou pull request.
+
+## Objetivo
+
+Demonstrar conhecimentos práticos em Quality
+Assurance, testes funcionais, automação de testes
+e boas práticas de desenvolvimento de software.
