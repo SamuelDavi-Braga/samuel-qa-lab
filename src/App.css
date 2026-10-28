@@ -791,7 +791,7 @@ nav a:hover {
   margin-top: 28px;
 }
 
-.filtros-historico > div {
+.filtros-historico>div {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -861,12 +861,12 @@ nav a:hover {
   color: #f3f6fc;
 }
 
-.automacao-testes > p {
+.automacao-testes>p {
   color: #aebed0;
   line-height: 1.6;
 }
 
-.automacao-testes > .laboratorio-subtitulo {
+.automacao-testes>.laboratorio-subtitulo {
   color: #25cdb5;
 }
 
@@ -881,7 +881,7 @@ nav a:hover {
   margin-top: 24px;
 }
 
-.automacao-metricas > div,
+.automacao-metricas>div,
 .automacao-card {
   padding: 24px;
   background: #101827;
@@ -934,4 +934,49 @@ nav a:hover {
   .automacao-metricas {
     grid-template-columns: 1fr;
   }
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #25cdb5;
+}
+
+#laboratorio {
+  scroll-margin-top: 100px;
+}
+
+.hero-botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+
+  background: #25cdb5;
+  color: #101827;
+
+  border: none;
+  border-radius: 6px;
+
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.hero-botao:hover {
+  background: #20b9a3;
+}
+
+.hero-botao:focus-visible {
+  outline: 2px solid #f3f6fc;
+  outline-offset: 3px;
 }

@@ -26,9 +26,10 @@ export const defeitos = [
         retestes: 4,
         aprovados: 4,
 
-    evidencias: {
-            antes: '/evidencias/bug-001-antes.png',
-            depois: '/evidencias/bug-001-depois.png'
+        evidencias: {
+            antes: `${import.meta.env.BASE_URL}evidencias/bug-001-antes.png`,
+            depois: `${import.meta.env.BASE_URL}evidencias/bug-001-depois.png`
         }
+
     }
 ]

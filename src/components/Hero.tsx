@@ -13,9 +13,17 @@ function Hero() {
         em qualidade de software.
       </p>
 
-      <a href="#laboratorio">
+      <button
+        type="button"
+        className="hero-botao"
+        onClick={() => {
+          document
+            .getElementById('laboratorio')
+            ?.scrollIntoView({ behavior: 'smooth' })
+        }}
+      >
         Explorar laboratório
-      </a>
+      </button>
     </section>
   )
 }
