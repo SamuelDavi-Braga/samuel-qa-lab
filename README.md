@@ -2,6 +2,15 @@
 # QA Engineering Lab
 [![QA Engineering Lab - CI](https://github.com/SamuelDavi-Braga/samuel-qa-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/SamuelDavi-Braga/samuel-qa-lab/actions/workflows/ci.yml)
 
+
+### Acesse o laboratório online
+
+**[Explorar o QA Engineering Lab](https://samueldavi-braga.github.io/samuel-qa-lab/)**
+
+Conheça os cenários funcionais, a biblioteca de casos de teste,
+a gestão de defeitos, o histórico de execuções e as suítes de automação.
+
+
 Portfólio interativo de Quality Assurance desenvolvido
 com React, TypeScript e Vite.
 

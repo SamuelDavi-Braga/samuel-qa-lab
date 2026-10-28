@@ -54,7 +54,7 @@ function CadastroVeiculo() {
     }
 
     return (
-        <section className="cadastro-veiculo">
+        <section id="cadastro-veiculo" className="cadastro-veiculo">
             <h2>Cadastro de Veículos</h2>
 
             <p>

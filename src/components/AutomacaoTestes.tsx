@@ -13,7 +13,7 @@ function AutomacaoTestes() {
   )
 
   return (
-    <section className="automacao-testes">
+    <section id="automacao-testes" className="automacao-testes">
       <p className="laboratorio-subtitulo">
         QA LAB / TEST AUTOMATION
       </p>

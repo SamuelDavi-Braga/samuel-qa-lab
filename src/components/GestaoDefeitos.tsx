@@ -7,7 +7,7 @@ function GestaoDefeitos() {
 
 
     return (
-        <section className="gestao-defeitos">
+        <section id="gestao-defeitos" className="gestao-defeitos">
             <p className="laboratorio-subtitulo">
                 QA LAB / DEFECT MANAGEMENT
             </p>

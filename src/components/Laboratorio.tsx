@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom'
 
 function Laboratorio() {
@@ -17,30 +18,53 @@ function Laboratorio() {
             <div className="laboratorio-grid">
                 <article className="projeto-card">
                     <h3>Testes Funcionais</h3>
-
                     <p>Casos de teste e validação de requisitos.</p>
 
                     <Link to="/laboratorio/testes-funcionais">
-                        Explorar projeto →
+                        Explorar Testes Funcionais →
                     </Link>
                 </article>
 
                 <article className="projeto-card">
                     <h3>Gestão de Defeitos</h3>
                     <p>Documentação de bugs, evidências e retestes.</p>
-                    <span>Em desenvolvimento</span>
+
+                    <Link
+                        to="/laboratorio/testes-funcionais"
+                        state={{ destino: 'gestao-defeitos' }}
+                    >
+                        Explorar Gestão de Defeitos →
+                    </Link>
                 </article>
 
                 <article className="projeto-card">
-                    <h3>Testes com IA</h3>
-                    <p>Revisão de cenários gerados com apoio de IA.</p>
-                    <span>Em desenvolvimento</span>
+                    <h3>Histórico de Execuções QA</h3>
+                    <p>
+                        Rastreabilidade das execuções,
+                        verificações e resultados dos testes.
+                    </p>
+
+                    <Link
+                        to="/laboratorio/testes-funcionais"
+                        state={{ destino: 'historico-execucoes' }}
+                    >
+                        Explorar Histórico QA →
+                    </Link>
                 </article>
 
                 <article className="projeto-card">
-                    <h3>QA Analytics</h3>
-                    <p>Indicadores e acompanhamento da qualidade.</p>
-                    <span>Em desenvolvimento</span>
+                    <h3>Automação de Testes</h3>
+                    <p>
+                        Suítes automatizadas com Vitest,
+                        React Testing Library e integração contínua.
+                    </p>
+
+                    <Link
+                        to="/laboratorio/testes-funcionais"
+                        state={{ destino: 'automacao-testes' }}
+                    >
+                        Explorar Automação →
+                    </Link>
                 </article>
             </div>
         </section>

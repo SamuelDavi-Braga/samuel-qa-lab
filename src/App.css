@@ -980,3 +980,103 @@ nav a:hover {
   outline: 2px solid #f3f6fc;
   outline-offset: 3px;
 }
+
+#gestao-defeitos {
+  scroll-margin-top: 100px;
+}
+
+.menu-laboratorio {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin: 28px 0 36px;
+}
+
+.menu-laboratorio button {
+    background: #19263a;
+    color: #f3f6fc;
+    border: 1px solid #34445b;
+    border-radius: 8px;
+    padding: 14px 12px;
+    cursor: pointer;
+    font: inherit;
+    font-size: 14px;
+}
+
+.menu-laboratorio button:hover,
+.menu-laboratorio button:focus-visible {
+    border-color: #25cdb5;
+    color: #25cdb5;
+}
+
+#cadastro-veiculo,
+#gestao-defeitos,
+#historico-execucoes,
+#automacao-testes {
+    scroll-margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+    .menu-laboratorio {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-laboratorio {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.voltar-topo {
+    position: fixed;
+    right: 28px;
+    bottom: 28px;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #25cdb5;
+    color: #101827;
+
+    font-size: 28px;
+    font-weight: 700;
+    cursor: pointer;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.voltar-topo:hover {
+    background: #20b9a3;
+    transform: translateY(-3px);
+}
+
+.voltar-topo:focus-visible {
+    outline: 2px solid #f3f6fc;
+    outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+    .voltar-topo {
+        right: 16px;
+        bottom: 16px;
+        width: 46px;
+        height: 46px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .voltar-topo {
+        transition: none;
+    }
+}

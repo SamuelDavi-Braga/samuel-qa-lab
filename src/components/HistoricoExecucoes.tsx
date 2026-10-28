@@ -41,7 +41,7 @@ function HistoricoExecucoes() {
     })
 
     return (
-        <section className="historico-execucoes">
+        <section id="historico-execucoes" className="historico-execucoes">
             <p className="laboratorio-subtitulo">
                 QA LAB / EXECUTION HISTORY
             </p>
