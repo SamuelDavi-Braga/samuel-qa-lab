@@ -1,5 +1,6 @@
 
 # QA Engineering Lab
+[![QA Engineering Lab - CI](https://github.com/SamuelDavi-Braga/samuel-qa-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/SamuelDavi-Braga/samuel-qa-lab/actions/workflows/ci.yml)
 
 Portfólio interativo de Quality Assurance desenvolvido
 com React, TypeScript e Vite.
